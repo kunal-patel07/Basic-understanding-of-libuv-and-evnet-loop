@@ -5,7 +5,7 @@ setImmediate(()=>{console.log("immediate")})
 setTimeout(() => {console.log("timeout")}, 0);
 
 Promise.resolve().then(()=>{console.log("promise resolve")})
-
+    
 fs.readFile("./file.txt","utf-8",()=>{
     console.log("File reading CB")
 })
@@ -18,7 +18,7 @@ process.nextTick(()=>{
 console.log("last line of code")
 
 //last line of code
-//promise resolved 
+//promise r esolved 
 //timeout
 //immedieate 
 //nexttick
