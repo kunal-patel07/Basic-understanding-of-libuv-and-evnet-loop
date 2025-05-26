@@ -18,7 +18,7 @@ process.nextTick(()=>{
 console.log("last line of code")
 
 //last line of code
-//promise r esolved 
+//promise resolved 
 //timeout
 //immedieate 
 //nexttick
