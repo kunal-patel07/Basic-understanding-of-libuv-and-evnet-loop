@@ -1,5 +1,5 @@
 let fs = require("fs")
-
+let https = require("http")
 setImmediate(()=>{console.log("immediate")})
 
 setTimeout(() => {console.log("timeout")}, 0);
@@ -17,13 +17,15 @@ process.nextTick(()=>{
 
 console.log("last line of code")
 
-//last line of code
-//promise resolved 
-//timeout
-//immedieate 
-//nexttick
-// inner nexttick
-//file reading cb 
+//**
+// last line of code 
+//nextTick 
+// inner nextTick
+// promise resolve
+// timeout
+// immediate
+// File reading CB
+// */
 
 function someAsyncOperation(callback) {
   // Assume this takes 95ms to complete
