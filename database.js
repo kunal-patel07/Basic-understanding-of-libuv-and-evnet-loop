@@ -10,21 +10,17 @@ async function main() {
   await client.connect();
   console.log("Connected successfully to server");
   const db = client.db(dbName);
-  const collection = db.collection("User");
+  const collection = db.collection("User"); 
 
   // the following code examples can be pasted here...
-  const data1 = {
-    firstName: "Vidhya",
-    lastName: "Patel",
-    City: "Modasa",
-    PhoneNo: "9898526526",
-  };
-  const insertResult = await collection.insertMany([data1]);
-  console.log("Inserted documents =>", insertResult);
-
+  
   const filteredDocs = await collection.find({}).toArray();
-  console.log("Found documents filtered by { a: 3 } =>", filteredDocs);
+  console.log("Found documents filtered by=>", filteredDocs);
+   const count = await collection.countDocuments({})
+   console.log("count of documets",count)
 
+   const result = await collection.find({firstName:"Riya"}).toArray()
+   console.log("Searched Data =>",result)
   return "done.";
 }
 main()
