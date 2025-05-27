@@ -19,8 +19,12 @@ async function main() {
    const count = await collection.countDocuments({})
    console.log("count of documets",count)
 
-   const result = await collection.find({firstName:"Riya"}).toArray()
-   console.log("Searched Data =>",result)
+
+   // remove document
+
+   const deleteResult = await collection.deleteMany({City:"Himmatnagar"});
+console.log('Deleted documents =>', deleteResult);
+
   return "done.";
 }
 main()
