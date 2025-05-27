@@ -1,10 +1,11 @@
-let http =require("http")
-
-let server = http.createServer(function(req,res){
-    if(req.url === "/secretData"){
-     res.end("there is nothing like secretData")
+let http = require("http")
+let mongodb =require("mongodb")
+console.log(mongodb)
+let server  = http.createServer(function(req,res){
+    if(req.url === "/security"){
+    res.end("there is nothing secured here");
     }
-    res.end("hello world")
+    res.end("this is server using node")
 })
 
-server.listen(7777)
+server.listen(3000)
